@@ -1,0 +1,8 @@
+I have made these changes in the code.
+
+Removed the import statement for ConstantValue from db_utils. This is because it is not being used in the code.
+Removed the import statement for CA_CERTIFICATE_FILE from db_utils. Instead, we're using db_utils.CA_CERTIFICATE_FILE in the ca_cert variable.
+Changed self.__db_uri() to self.__db_uri() in the __connect method of the DBConnect class.
+Added ssl=True to the MongoClient connection string.
+Removed the ssl=true parameter from the __db_uri method and added tlsCAFile parameter.
+Changed the return value of the except block to include the string representation of the error using str(e) instead of (e) to avoid a TypeError.

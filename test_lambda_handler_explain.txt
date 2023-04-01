@@ -1,0 +1,5 @@
+In the test_lambda_handler_success test case, we pass in empty event and context objects to the lambda_handler function, and then check that the result has isError set to False, and that the body field is not empty.
+
+In the test_lambda_handler_error test case, we do the same thing, but we expect an error to occur. We check that isError is set to True, and that the error message contains the word "Error".
+
+To run the test cases, simply navigate to the directory where your code and test files are located and run pytest from the command line. pytest will automatically discover and run any test cases in files that start with test_.

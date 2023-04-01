@@ -1,0 +1,8 @@
+In these test cases, we are using the MagicMock class from the unittest.
+mock module to mock the database connection and find method. 
+We are then testing two scenarios: 
+one where the find method returns a successful response. 
+one where it raises an error. 
+We assert that the lambda handler returns the expected response in each scenario. 
+Note that these test cases assume that the Country_Master collection has documents with a name and population field. 
+If this is not the case, you may need to modify the expected results accordingly.

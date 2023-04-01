@@ -1,0 +1,12 @@
+we create two fixtures: mocked_db_collection and mocked_db_connection. The first one creates a mock collection object that returns some test data when find is called on it. The second one creates a mock database connection object that returns our mock collection object when __getitem__ is called on it. We use the monkeypatch fixture provided by pytest to replace the MongoClient constructor with our mock object.
+
+Finally, we write a test case called test_lambda_handler that calls our lambda function with None for the event and context arguments (since they're not used in the function), and checks that the returned response matches our expected response.
+
+
+To run our tests and generate a coverage report:
+
+#code :  coverage run -m pytest test_lambda_handler.py
+
+
+This code will show us which lines of our code were executed during the tests, and which ones were not.
+#code: coverage report -m
